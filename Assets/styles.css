@@ -1,0 +1,545 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+body{
+    background-color: #fafafa;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+
+}
+
+body.dark{
+    background: #23232e;
+    .second p, h2{
+        color: #fafafa;
+    }
+    .stacks-all p, h2{
+        color: #fafafa;
+        
+    }
+    .sidebar h3, p{
+        color: #fafafa;
+    }
+
+}
+
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-family:system-ui,
+     -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: trnasform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+
+}
+
+.fa-sun{
+    color: #f39c12;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+    color: #fff;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+.photo-me img{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   padding:10px; 
+}
+
+.one{
+    display: flex;
+    width: 99%; 
+    margin: 0;
+}
+
+.sidebar{
+    background-color: rgba(20, 20, 73, 0.253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    height: 92vh;
+    /* border: red 2px solid; */
+     margin-top: 2vh;
+     margin-right: 2vw; 
+     border-radius: 5px;
+}
+
+.social-midea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 15vw;
+    height: 5vh;
+    margin: 2vw;
+    /* border: red 1px solid; */
+}
+
+.instagram{
+    width: 3vw;
+    height: 5vh;
+    /* border: red 1px solid; */
+    margin-left: 1vw;
+}
+
+.linkedin{
+    width: 3vw;
+    height: 5vh;
+    /* border: red 1px solid; */
+    margin-left: 1vw;
+}
+
+.github{
+    width: 3vw;
+    height: 5vh;
+    /* border: red 1px solid; */
+    margin-left: 1vw;
+}
+.social-midea img{
+    width: 3vw;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20vw;
+    height: 30vh;
+    margin: 2vw;
+    text-align: left;
+    /* border: red 1px solid; */ 
+}
+
+.contact p{
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+}
+
+.contact h3{
+
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contact img {
+    width: 2vw;
+    margin: 1vw;
+}
+
+.phone{
+    display: flex;
+    margin: 2vh;  
+}
+
+.mail{
+    display: flex;
+    margin: 2vh;   
+}
+
+.location{
+    display: flex;
+    margin: 2vh;
+    text-align: left;   
+}
+
+.about{
+    background-color: rgba(20, 20, 73, 0.253);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 5px;
+    
+}
+
+.about p{
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 10px;
+}
+
+.stacks-all{
+    /* border: red 2px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+.stacks-txt{
+    margin: 1vw;
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.stacks-grid{
+    display: flex;
+    background-color: rgba(20, 20, 73, 0.253);
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.stacks-txt{
+    display: flex;
+    justify-content: center;
+}
+
+.card-tech{
+   width:40%;
+   margin: 1vw;
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+   font-size: medium;
+   border-radius: 5px;
+}
+
+.card-tech img{
+    width: 4vw;
+    margin: 1vw;
+}
+
+.card-tech p {
+
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.second{
+    margin-top: 1vw;
+    display: flex;
+    background-color: rgba(20, 20, 73, 0.253);
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+    height:80vh ;
+    width: 99%;
+}
+
+.second a{
+    height: 30vh;
+    width: 30vw;
+    margin: 2vh;
+}
+
+
+.projects-txt h2{
+    text-align: center;
+    color:black;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.projects p{
+    color: #000000;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 25vw;
+    float: left;
+    
+    margin:2vh;
+    
+}
+
+.second img{
+    width: 300px;
+    height: 200px;
+}
+
+.card p, h2 {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 1vw;
+}
+
+
+
+
+.cards a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.third{
+    width: 25vw;
+    height: 50vh;
+}
+
+#my-image{
+    display: flex;
+    width: 30vh;
+    border-radius: 50%;
+    margin: 1vw;
+}
+
+
+
+@media (max-width: 999px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 25vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        overflow-x: hidden;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    .one{
+        flex-direction: column;
+    }
+
+    .card-tech{
+        width: 99%;
+        margin-top: 20px;
+        border-bottom: rgb(133, 127, 127) 1px solid;
+    }
+
+    #my-image{
+        width: 30vw;
+
+    }
+
+    .label{
+        margin-left: 5px;
+    }
+    .logo{
+        font-size: small;
+    }
+    .contact{
+        width: 20vh;
+    }
+    .sidebar{
+        margin: 0;
+        width: 100%;
+        height: 60vh;
+    }
+    .about{
+        width: 100%;
+    }
+    .stacks-grid{
+        width:100% ;
+        margin: 0;
+        margin-top: 2vh;
+    }
+    .stacks-grid img{
+        width: 5vw;
+    }
+    .card img {
+        width: 130px;
+        height: 80px;
+
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        border-bottom: rgb(133, 127, 127) 1px solid;
+        
+    }
+    .card a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60vw;
+        
+        border-radius: 5px;
+    }
+    .card p, h2{
+        font-size: small;
+        margin: 2vw;
+    }
+    .second{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+        margin-top: 2vh;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .stacks-all{
+        width: 100%;
+        margin: 0;
+        margin-top: 2vh;
+    }
+    .contact img{
+        width: 5vw;
+    }
+    .social-midea{
+        width: 100%;
+        
+    }
+    .social-midea img {
+        width: 5vw;
+        margin: 1vw;
+    }
+    .linkedin{
+        width: 8vw;
+        height: 4vh;
+    }
+    .instagram{
+        width: 8vw;
+        height: 4vh;
+    }
+    .github{
+        width: 8vw;
+        height: 4vh;
+    }
+    
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    
+}
+
+.mobile-menu.active .Line1{
+    transform:rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .Line2{
+    opacity: 0;
+
+}
+.mobile-menu.active .Line3{
+    transform:rotate(45deg) translate(-5px, -7px);
+}
+@keyframes animated-fade { 
+    0%{
+        background-position-x: 0% ;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
